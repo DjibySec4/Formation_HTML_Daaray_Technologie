@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apprendre HTML</title>
+
+        <link rel="icon" href="public/images/art.jpg">
+
+        <!-- Style.css -->
+        <link rel="stylesheet" href="public/css/style.css" media="screen and (max-width:500px)">
+        
+        <!-- CDN (Content Delivery Network) : Font Awesome  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- CDN select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        
+
+
+        <style>
+            /* Balise adresse */
+            a[href^="mailto"]::before
+            {
+                content: "📨";
+                
+            }
+            a[href^="tel"]::before
+            {
+                content: "☎️" ;
+            }
+            /* a 
+            {
+                text-decoration: none;
+                color: #222;
+            } */
+
+            /* Balise article */
+            .art 
+            {
+                margin: 0px;
+                background-color: #eee;
+                padding: .3rem;
+                font: 1rem 'Fira sans', sans-serif;
+            }
+
+            .art > h1, .article-item
+            {
+                font-size: 1.2rem;
+                margin: .5rem;
+                padding: .3rem;
+                
+            }
+            .article-item
+            {
+                background: right/contain content-box border-box no-repeat 
+                url("public/images/img.jpg") white;
+            }
+            .article-item > h2, .article-item > p 
+            {
+                font-size: 1rem;
+                margin: .2rem;
+            }
+            
+
+            /* Balise aside */
+            aside 
+            {
+               width: 40%; 
+               float: right;
+               margin-left: .7rem;
+               padding-left: .5rem;
+               box-shadow: 5px 0px 5px -5px #1c76a4 inset;
+               font-style: italic;
+               color: #1c76a4;
+            }
+
+            aside > p{
+                margin: .6rem;
+            }
+
+
+            /* Balise button */
+            .myButton 
+            {
+                font-size: 13px;
+                color: #fff;
+                background-color: rgba(220, 0, 0, 1);
+                border-radius: 10px;
+                text-align: center;
+                text-shadow: 1px 1px 1px #000;
+                padding: 2px;
+            }
+            .myButton:hover 
+            {
+                background-color: orange;
+            }
+            .myButton:active 
+            {
+                box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 6);
+            }
+            .myButton::before 
+            {
+                content: "➕";
+            }
+
+
+        </style>
+
+    </head>
+    <body id="entete">
+
+        <a href="#pied_de_page">Vers le bas </a>
+
+        <!-- Les titres en html -->
+        <h3> Les titres en html</h3>
+        <h1>Titre h1</h1><h2>Titre h2</h2>
+        <h3>Titre h3</h3>
+        <h4>Titre h4</h4>
+        <h5>Titre h5</h5>
+        <h6>Titre h6</h6> <hr>
+
+        <!-- Balise <br> -->
+        <h3> Balise <br> </h3>
+        Je suis à l'ecole <br>
+        Je suis à l'ecole <br>
+        Je suis à l'ecole <hr>
+
+        <!-- La balise pre -->
+        <h3>La balise pre </h3>
+        <pre>
+            Ligne 1
+            Ligne 2
+            Ligne 3 
+        </pre> <hr>
+
+        <!-- Marquer l'impotance d'un texte -->
+        <h3 id="milieu"> Marquer l'impotance d'un texte </h3>
+        <b>Texte affiché en gras avec la balise b</b> <br>
+        <strong>Texte affiché en gras avec la balise strong</strong> <br>
+        <i>Texte affiché en italique avec la balise i</i> <br>
+        <em>Texte affiché en italique avec la balise em</em> <br>
+        <mark>Text important !</mark> <hr>
+    
+        <!-- 
+            Les liste : 
+                -> Unordered list (Liste non ordonée) -> <ul>
+                -> Ordered list (Liste ordonée) -> <ol>
+                -> Description List (Liste de description ) 
+         -->
+         <!-- Unordered list -->
+         <h3>Liste non ordonée</h3>
+         <ul>
+            <li type="circle">Café</li>
+            <li type="square">Ataya</li>
+            <li type="none">Méw</li>
+         </ul>
+
+         <ul style="list-style-type: square;">
+            <li>Café</li>
+            <li>Ataya</li>
+            <li type="none">Méw</li>
+         </ul> <hr>
+
+         <!-- Ordered list -->
+         <h3>Liste ordonée</h3>
+         <ol>
+            <li>Element un</li>
+            <li>Element deux</li>
+            <li>Element trois</li>
+         </ol> <hr>
+
+           <!-- Liste de description -->
+           <h3>Liste de description</h3>
+           <dl>
+                <dt>Titre test</dt>
+                <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi dolor pariatur quaerat odit cum inventore doloremque, corporis nesciunt quis rem ullam sed est deleniti. Beatae minus ex maxime autem quae.</dd>
+
+                <dt>Titre test</dt>
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quod ex illo iure quo numquam, sint non, ipsum, consectetur quisquam placeat possimus vero? Similique, corrupti dolore. A autem vero facilis.</dd>
+
+                <dt>Titre test</dt>
+                <dd>Une description de test</dd>
+
+                <dt>Titre test</dt>
+                <dd>Une description de test</dd>
+
+                <dt>Titre test</dt>
+                <dd>Une description de test</dd>
+           </dl> <hr>
+
+
+             <!-- Imbrication de liste -->
+            <h3> Imbrication de liste</h3>
+           <ul>
+                <li>Element 1</li>
+                <li>Element 2
+                    <ul style="list-style-type: square;">
+                        <li>Sous element 1</li>
+                        <li>Sous element 2
+                            <ol>
+                                <li>sous sous element 1</li>
+                                <li>sous sous element 2</li>
+                            </ol>
+                        </li>
+                        <li>Sous element 3</li>
+                    </ul>
+                </li>
+                <li>Element 3</li>
+           </ul> <hr>
+
+           <!-- Les Liens  -->
+           <h3>Les liens</h3>
+           <a href="https://www.youtube.com" target="_blank">Un lien vers youtube</a> <br>
+
+           <a href="https://www.youtube.com" target="_blank">
+                <img src="public/images/DjibySeck.jpg" width="100px" height="90px" alt="Image Test">
+           </a>
+
+           <a href="mailto:test@gmail.com">Envoyer un mail</a>
+           <a href="tel:770000000">Passer un appel</a>
+           
+           <button onclick="document.location='index2.html'">Bouton en tant que lien</button>
+
+           <ul>
+                <li>
+                    <a href="pages/home/acceuil.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="pages/apropos.html">A propos</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="pages/bloc.html">Bloc</a>
+                </li>
+            </ul>
+
+
+            <!-- Les ancres -->
+            <a href="#entete">Vers haut </a>
+            <a href="#milieu">Vers le milieu</a>
+            <div id="pied_de_page"></div> <hr>
+           
+
+            <!-- Les Images -->
+            <h3>Les Images</h3>
+            <img src="public/images/photo2.jpeg" alt="Image test" width="40px" height="40px">  
+            <!-- 
+                Les formats d'image
+                GIF -> Graphics Interchage Format
+                JPEG  -> Joint Photographic Experts Group
+                PNG  -> Portable Network Graphics
+
+                WebP
+                BPG (Better Portable Graphics)
+                HEIC 
+             --> <hr>
+
+
+             <!-- Les balises dépréciées -->
+             <h3>Les balises dépréciées</h3>
+             <center>Bienvenue sur Daaray Technologie !</center>
+             <div style="text-align: center;">
+                Bienvenue sur Daaray Technologie !
+             </div>
+             <acronym title="World Wide wEB">WWW</acronym> n'est qu'une facette de Internet <br>
+             <abbr title="World Wide wEB">www</abbr> n'est qu'une facette de Internet <br>
+            <strike>Je test</strike>
+            <s>Je test</s> <br>
+            <font color="orange" size="10px">Bonjour à tous</font> <br><hr>
+
+            <!-- Balise adresse -->
+            <h3>Balise adresse</h3>
+            <address>
+                <a href="mailto:test@gmail.com">Envoyer un email</a> <br>
+                <a href="tel:770000000">Passer un appel</a>
+            </address> <br> <hr>
+
+            <!-- Balise bdo --> 
+            <h3>Balise bdo</h3>
+            <bdo dir="rtl">Test</bdo> <br> <hr>
+
+            <!-- Balise article --> 
+            <h3>Balise article</h3>
+            <address class="art">
+                <h1>Les articles de la semaine</h1>
+
+                <article class="article-item">
+                    <h2>06 Avril 2023</h2>
+                    <p>Premier article</p>
+                </article>
+
+                <article class="article-item">
+                    <h2>20 Mai 2023</h2>
+                    <p>Deuxieme article</p>
+                </article>
+
+                <article class="article-item">
+                    <h2>02 Juin 2023</h2>
+                    <p>Troisieme article</p>
+                </article>
+            </address><br>
+
+            <!-- Balise aside -->
+            <h3>Balise aside</h3>
+            <p>Apprendre la balise aside</p>
+            <aside>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </p>
+            </aside>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eos quis mollitia veniam consectetur similique aperiam nihil 
+                aliquam non laudantium illo pariatur tenetur, 
+                dolor quisquam quod aspernatur aut eaque, corporis eius?
+            </p> <br> <hr>
+
+            <!-- Balise audio -->
+            <h3> Balise audio</h3>
+
+            <audio src="public/media/ataba.mp3" controls autoplay disabledRemotePlayBack loop muted preload="none"></audio>
+            
+            <audio controls preload="metadata"> 
+                <source src="public/media/ataba.mp3" type="audio/mp3">
+                <source src="public/media/ataba.mp4" type="audio/mp4">
+                <source src="public/media/ataba.mpeg" type="audio/mpeg">
+                <source src="public/media/ataba.ogg" type="audio/ogg">
+            </audio> <br> <hr>
+
+
+            <!-- Balise blockquote -->
+            <h3> Balise blockquote</h3>
+            <figure>
+                <blockquote cite="https://www.test.com">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam explicabo culpa facere sapiente tempora consequatur eius non repellendus voluptate, illum quae, nulla ullam assumenda et magni obcaecati, nemo temporibus aut?</p>
+                </blockquote>
+                <figcaption>Daaray Technologie <cite>Djiby Seck</cite></figcaption>
+            </figure>
+
+
+            <!-- Balise Button -->
+            <h3> Balise Button</h3>
+            
+            <button  class="myButton" type="button">
+                Ajouter au panier
+            </button>   <br> <hr>
+
+            <!-- Balise code -->
+            <h3>Balise code</h3>
+            <code style="background-color: #eee; border-radius: 3px; font-family: 'Courier New', Courier, monospace;">
+                push()
+            </code> method adds one or more elements to the end of an array and returns 
+            the new length of the array <br> <hr>
+
+
+             <!-- Balise data -->
+             <h3>Balise data</h3>
+             <style>
+                data:hover::after 
+                {
+                    content: ' => Version : ' attr(value);
+                    font-size: 12px;
+                    color: #1ce;
+                    font-weight: bold;
+                }
+             </style>
+             <h3>Balise data</h3>
+             <ul>
+                <li> <data value="v1">Mini Telephone</data> </li>
+                <li> <data value="v2">Maxi Telephone</data> </li>
+                <li> <data value="v3">Mega Telephone</data> </li>
+             </ul><br> <hr>
+
+
+            <!-- Balise datalist -->
+            <h3>Balise datalist</h3>
+            <label for="nav">Veuillez selectionner un navigateur parmi ceux-ci</label>
+            <input list="navigateurs" id="nav" type="text">
+            <datalist id="navigateurs">
+                <option value="Chrome">
+                    <option value="Chrome Android">
+                    <option value="Firefox">
+                    <option value="Firefox for Android">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Opera Mini">
+                    <option value="Opera for Android">
+                    <option value="Safari">
+                    <option value="Safari for IOS">
+                    <option value="Microsoft Edge">
+            </datalist> <br> <hr>
+
+
+            
+            <!-- Balise details - summary -->
+            <h3>Balise details - summary</h3>
+            <details style="border: 1px dashed black;">
+                <summary>Cliquer pour Ouvrir</summary>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed repellat quia nulla labore ullam! Odit facilis earum sunt est hic similique dolorum quaerat, alias, asperiores reprehenderit, tempora labore vitae ut?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed repellat quia nulla labore ullam! Odit facilis earum sunt est hic similique dolorum quaerat, alias, asperiores reprehenderit, tempora labore vitae ut?
+            </details>
+
+
+            <!-- Balise dfn -->
+            <h3>Balise dfn</h3>
+            <p>
+                <dfn>Base de données :</dfn> C'est un ensemble de données structurées.
+            </p>
+
+
+            <!-- Balise fieldset -->
+            <h3>Balise fieldset</h3>
+             <form>
+                <fieldset>
+                    <legend>Choisissez votre art matial préféré</legend>
+
+                    <input type="radio" checked id="karate" name="artmatial" value="karate">
+                    <label for="karate">Karaté</label> <br>
+
+                    <input type="radio" id="judo" name="artmatial" value="judo">
+                    <label for="judo">Judo</label><br>
+ 
+                    <input type="radio" id="kung-fu" name="artmatial" value="kung-fu">
+                    <label for="kung-fu">Kung-fu</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choisissez votre art matial préféré</legend>
+
+                    <input type="checkbox" checked id="karate" name="artmatial" value="karate">
+                    <label for="karate">Karaté</label> <br>
+
+                    <input type="checkbox" id="judo" name="artmatial" value="judo">
+                    <label for="judo">Judo</label><br>
+ 
+                    <input type="checkbox" id="kung-fu" name="artmatial" value="kung-fu">
+                    <label for="kung-fu">Kung-fu</label><br>
+                </fieldset>
+             </form> <hr>
+
+
+            <!--  Balise footer -->
+            <h3>Balise footer</h3>
+            <style>
+                footer
+                {
+                    background-color: #45a1ff;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px;
+                    color: #fff;
+                }
+            </style>
+            <footer>
+                <p>Copyright &copy; 2023 Daaray Technologie</p>
+            </footer>  <br> <hr>
+
+
+            <!-- Balise figcaption  -->
+            <h3>Balise figcaption </h3>
+            <style>
+                #figure-art
+                {
+                    border: thin solid #c0c0c0;
+                    padding: 5px;
+                    margin: auto;
+                    max-width: 220px;
+                    display: inline-block;
+
+                }
+                #img-art
+                {
+                    max-width: 220px;
+                    max-height: 150px;
+                }
+                #figcaption-art 
+                {
+                    background-color: #222;
+                    color: #fff;
+                    padding: 3px;
+                    font: italic;
+                    text-align: center;
+                }
+
+            </style>
+            <figure id="figure-art">
+                <img id="img-art" src="public/images/art.jpg" alt="Image d'art" >
+
+                <figcaption id="figcaption-art">La vie est belle !</figcaption>
+            </figure>
+
+            <figure id="figure-art">
+                <img id="img-art" src="public/images/art.jpg" alt="Image d'art" >
+
+                <figcaption id="figcaption-art">La vie est belle !</figcaption>
+            </figure>
+            <figure id="figure-art">
+                <img id="img-art" src="public/images/art.jpg" alt="Image d'art" >
+
+                <figcaption id="figcaption-art">La vie est belle !</figcaption>
+            </figure> <br> <hr>
+
+
+            <!-- La Balise header -->
+            <h3>La Balise header</h3>
+            <style>
+                #lien-header
+                {
+                    background: left / cover url("public/images/art.jpg");
+                    display: flex;
+                    height: 120px;
+                    justify-content: center;
+                    align-items: center;
+
+                    /* long hand */
+                    /* font-weight: bold;
+                    font-size: 3em;
+                    font-family: 'Dancing Script', fantasy; */
+
+                    /* short hand */
+                    font : bold 2em 'Dancing Script';
+                    color: #fff;
+                    text-decoration: overline;
+                    border-top: 3px solid #1ce;
+                }
+
+                #lien-header:hover
+                {
+                    box-shadow: 2px 2px 3px rgb(101, 96, 96);
+                    font-size: 1.5em;
+                }
+            </style>
+            <header>
+                <a id="lien-header" href="#">Bienvenue sur Daaray Technologie</a>
+            </header> <br> <hr>
+
+
+            <!-- Balise hgroup -->
+            <h3>Balise hgroup</h3>
+            <hgroup style="border-left: 10px solid #00c8d7;">
+                <div style="margin-left: 10px;">
+                    <h1 style="margin-bottom: 0;">Darray Technologie</h1>
+                    <p style="margin: 0; font-weight: bold;">Ecole virtuelle sénégalaise !</p>
+                </div>
+            </hgroup>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum fugit animi, illo quas, inventore praesentium saepe recusandae, ducimus voluptate corporis eveniet! Itaque officiis non sint sequi! Excepturi ipsam cumque quae.</p>
+
+
+            <!-- iframe -->
+            <div style="text-align: center;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955909.4580650902!2d-16.76114172042483!3d14.473614068170551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0x5a46a55099615940!2zU8OpbsOpZ2Fs!5e0!3m2!1sfr!2ssn!4v1681093218477!5m2!1sfr!2ssn" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><br> <hr>
+
+
+            <!-- Les balises ins / del -->
+            <h3> Les balises ins / del</h3>
+            <style>
+                del, ins 
+                {
+                    
+                    display: block;  /* permet de transformer une balise de type inline en balise de type block */
+                    text-decoration: none; 
+                    position: relative;
+                }
+
+                del 
+                {
+                    background-color: #fbb;
+                }
+
+                ins{
+                    background-color: #d4fcbc;
+                }
+
+                del::before
+                {
+                    content: "-";
+                }
+
+                ins::before
+                {
+                    content: "+";
+                }
+
+
+                del::before, ins::before
+                {
+                    position: absolute;
+                    left: .5rem;
+                }
+
+                p 
+                {
+                    margin: 0 1.8rem 0;
+                    font-size: 1rem;
+                    font-family: 'Times New Roman', Georgia, Times, serif;
+                }
+
+            </style>
+            <p><q>Liste des éléments</q></p>
+
+            <del>
+               <p><q>Element supprimé de la liste</q></p>
+            </del>
+
+            <ins>
+                <p><q>Element ajouté à la liste</q></p>
+            </ins><br> <hr>
+
+
+            <!-- Les balises kbd (keyboard = clavier) -->
+            <h3> Les balises kbd (keyboard = clavier)</h3>
+            <style>
+                kbd 
+                {
+                    background-color: #eee;
+                    border-radius: 3px;
+                    border: 1px solid #b4b4b4;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 2);
+                    font-weight: 700;
+                    padding: 2px;
+                }
+            </style>
+            <p >
+                Please press : <kbd>Ctrl</kbd> +  <kbd>Shift</kbd> +  <kbd>:</kbd> pour
+                faire un commantaire.
+            </p> <br> <hr>
+
+
+            <!-- Balise link -->
+            <h3> Balise link (Voir la balide head)</h3><br> <hr>
+
+
+             <!-- Balise main -->
+             <h3> Balise main </h3>
+            <!-- menu -->
+            <main >
+                <!-- contenu pricipal -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sed nemo molestiae minima debitis fugiat ullam impedit doloremque, ab, obcaecati voluptatum quaerat. Animi expedita illum praesentium, aliquam commodi distinctio voluptas?</p>
+            </main>
+            <!-- footer --> <br> <hr>
+
+
+            <!-- Balise marquee -->
+            <h3> Balise marquee </h3>
+            <div style="border:thin solid black; padding: 10px;">
+                <marquee behavior="alternate" direction="" loop="-1" scrollamount="3px"  truespeed>Se former et bien se former sur Daaray Technologie !</marquee>
+            </div> <br> <hr>
+
+
+            <!-- Balise menu -->
+            <h3>Balise menu</h3>
+            <style>
+                menu 
+                {
+                    display: flex;
+                    justify-content: center;
+                    list-style: none;
+                    border: 1px solid rgb(219, 211, 211);
+                    background-color: #222;
+                    border-top: 2px solid #1ce;
+                }
+
+                menu > li 
+                {
+                    margin: 10px;
+                }
+                menu > li > a 
+                {
+                    color: #fff;
+                    text-decoration: none;
+                }
+                menu > li a:hover
+                {
+                   background-color: #fff;
+                   color: #222;
+                   padding: 3px;
+                   border-bottom: 2px solid #1ce;
+                }
+
+            </style>
+            <menu>
+                <li class="active">
+                    <a href=""><i class="fa-solid fa-house-user"></i> Accueil</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-sharp fa-solid fa-address-card"></i> A propos</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-comments"></i> Bloc</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-sharp fa-solid fa-address-book"></i> Contact</a>
+                </li>
+            </menu><br> <hr>
+
+
+            <!-- Balises meter et progress -->
+            <h3> Balises meter et progress</h3>
+            <!-- 
+                Note :
+                low  -> rouge
+                high -> orange
+                optimum -> verte 
+             -->
+            <label for="level">Niveau Batterie2</label>
+            <meter id="level" min="0" max="100" low="33" high="66" optimum="80" value="80"></meter>
+
+            <label>Niveau Batterie2</label>
+            <progress max="100" value="77"></progress> <br> <hr>
+
+
+            <!-- Création d'un formulaire  -->
+            <h3>Création d'un formulaire</h3>
+
+            <style>
+                form 
+                 {
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                    border-radius: 5px;
+                 }
+
+                 #createAccount > input, #createAccount > select 
+                 {
+                    width: 100%;
+                    padding: 10px 18px;
+                    margin: 8px 0px;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                 }
+
+                 input[type="submit"]
+                 {
+                    background-color: #4CAF50;
+                    color: #fff;
+                    font-weight: bold;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                 }
+
+                 input[type="submit"]:hover
+                 {
+                    background-color: #45a049;
+                 }
+
+                 input[type="reset"]
+                 {
+                    background-color: brown;
+                    color: #fff;
+                    font-weight: bold;
+                 }
+
+            </style>
+            <form id="createAccount" action="index.php" method="post" enctype="multipart/form-data">
+                
+                <!-- Prénom -->
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrer votre prénom" autofocus required>
+
+                <!-- Nom -->
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrer votre prénom"   required>
+
+                <!-- Date de naissance -->
+                <label for="dateNaissance">Date de naissance</label>
+                <input type="date" id="dateNaissance" name="dateNaissance"  placeholder="Entrer votre date de naissance"  required>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Entrer votre email"  required>
+
+                 <!--Photo -->
+                 <label for="photo">Photo</label>
+                 <input type="file" id="photo" name="photo" placeholder="Entrer votre photo"  required>
+ 
+                <!-- Password-->
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrer votre password"  required>
+            
+                <!-- Pays-->
+                <label for="pays">Pays</label>
+                <select name="pays" id="pays">
+                    <option value="Sénégal">Sénégal</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select>
+
+
+                <!-- Diplôme -->
+                <fieldset>
+                    <legend>Choisissez vos diplômes</legend>
+
+                    <input type="checkbox" checked id="licence" name="diplome" value="licence">
+                    <label for="licence">Licence</label> <br>
+
+                    <input type="checkbox" id="master" name="diplome" value="master">
+                    <label for="master">Master</label><br>
+ 
+                    <input type="checkbox" id="doctorat" name="diplome" value="doctorat">
+                    <label for="doctorat">Doctorat</label><br>
+                </fieldset>
+
+                <input type="submit" value="Créer le compte">
+                <input type="reset" value="Annuler">
+            </form> <br> <hr>
+    
+            
+            <!-- Balise output -->
+            <form oninput="result.value= parseInt(a.value) + parseInt(b.value)">
+                <input type="range" name="b" value="50"> +
+                <input type="number" name="a" value="10"> = 
+
+                <output name="result">60</output>
+            </form> <br> <hr>
+
+            <!-- Balise q -->
+            <h3>Balise q</h3>
+            <q>La vie est belle !</q><br> <hr>
+
+
+            <!-- Balise s -->
+            <h3>Balise s</h3>
+            <s>Ce texte est barré !</s><br> <hr>
+
+
+            <!-- Balise samp -->
+            <h3>Balise samp</h3>
+            <p>
+                <samp>
+                    Keyboard not found <br> Press F1 to continue
+                </samp>
+            </p>
+            <br> <hr>
+
+
+            <!-- Balise small -->
+            <h3>Balise small</h3>
+            <small>Texte affiché avec la balise small !</small>
+            <p>Texte affiché avec la balise p</p>
+            <br> <hr>
+
+
+            <!-- Balise sub -->
+            <h3>Balise sub</h3>
+            <p>
+                La molécule préférée de tous les developpeurs est 
+                C<sub>8</sub>H<sub>10</sub> N<sub>4</sub>0<sub>2</sub> également connu sous le nom de caféine.
+            </p>
+            <br> <hr>
+
+
+             <!-- Balise sup -->
+             <h3>Balise sup</h3>
+             <p>
+                 Le <em>théoreme de pythagore</em> est souvent exprimé par l'equation suivante : 
+                 a<sup>2</sup> + 
+                 b<sup>2</sup> = 
+                 c<sup>2</sup>
+             </p>
+             <br> <hr>
+        
+
+
+            <!-- Balise select2 -->
+            <h3>Balise select2</h3>
+            <select style="width: 100%;" class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="SN">Sénégal</option>
+                <option value="FR">France</option>
+                <option value="CD">Canada</option>
+            </select>
+
+            <select style="width: 100%;" class="js-example-basic-single" name="state">
+                <option value="AL">Alabama</option>
+                <option value="AL">Almagne</option>
+                <option value="USA">USA</option>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            
+            
+
+            <!-- Les balises de mise en page -->
+            <h3>Les balises de mise en page</h3>
+            <header>
+                <!-- tout ce qui est entete -->
+            </header>
+
+            <nav>
+                <!-- menu ici -->
+            </nav>
+
+            <section>
+                <!-- section -->
+            </section>
+
+            <article>
+                <!-- article ici -->
+            </article>
+
+            <aside>
+                <!-- aside ici -->
+            </aside>
+
+            <footer>
+                <!-- footer ici -->
+            </footer>
+
+
+            <!-- Les entités HTML -->
+            <h3>Les entités HTML</h3>
+            Salut &nbsp;&nbsp;  papa <br>
+
+            &lt; &gt; &amp;
+
+
+
+
+
+            <!-- cdn jquery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+            <!-- cdn select2 -->
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+            <script src="public/js/index.js"></script>
+
+    </body>
+</html>

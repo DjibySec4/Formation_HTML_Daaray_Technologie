@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Les attributs universels -->
+    <h1><u>Les attributs universels</u></h1>
+
+     <!-- attribut universel accesskey -->
+    <h3><u>attribut universel accesskey</u></h3>
+    <!-- 
+        Firefox => alt + shift + touche
+        Edge   => Alt + touche
+        Internet Explorer   => Alt + touche
+        Chrome   => Alt + touche ou Ctrl + Alt + touche
+        Safri   => Alt + touche ou Ctrl + Alt + touche
+        Opera   => Alt + touche ou Ctrl + Alt + touche
+        
+     -->
+    <p>Envoyez moi un message WhatsApp</p>
+    <a accesskey="w" href="http://wa.me/+770000000" target="_blank">Appuyez sur ALT + w </a><br> <hr>
+
+
+    <!-- attribut universel autofocus -->
+    <h3><u>attribut universel autofocus</u></h3>
+    <input type="text" name="nom" autofocus>
+    <input type="text" name="prenom" ><br> <hr>
+
+
+    <!-- attribut universel class -->
+    <h3><u>attribut universel class</u></h3>
+    <style>
+        .monPara
+        {
+            background-color: red;
+        }
+    </style>
+  
+    <p class="p1 monPara p-test">Je suis un paragraphhe</p>
+    <p class="monPara">Je suis un autre paragraphhe</p><br> <hr>
+
+
+    <!-- attribut universel contenteditable -->
+    <h3>attribut universel contenteditable</h3>
+
+    <p  contenteditable="true" style="background-color: #eee;">Modifier ce paragraphe</p>
+    <p contenteditable="false" style="background-color: #eee;">Paragraphe non modifiable</p>
+    <blockquote contenteditable="true" style="background-color: #eee;">
+        Modifier ce contenu pour ajouter votre propre citation.
+    </blockquote>  <br> <hr>
+
+
+    
+    <!-- attribut universel draggable -->
+    <h3>attribut universel draggable</h3>
+    <p draggable="false">Texte non draggable</p><br> <hr>
+
+
+    <!-- attribut universel hidden  -->
+    <h3>attribut universel hidden </h3>
+    <p hidden>Je suis un paragraphe</p>
+    <form action="">
+        <input type="text" name="nom" id="nom" placeholder="Entrer votre nom">
+        <input type="email" name="email" id="email" placeholder="Entrer votre email">
+        <input hidden type="text" name="" id="" value="Passer123" >
+        <button>Envoyer</button>
+    </form><br> <hr>
+
+
+    <!-- attribut universel id  -->
+    <h3>attribut universel id </h3>
+    <style>
+        #p-preferer
+        {
+            background-color: aqua;
+        }
+    </style>
+    <p id="p-preferer">Je le paragraphe préféré !</p><br> <hr>
+
+
+
+    <!-- attribut universel spellcheck  -->
+    <h3>attribut universel spellcheck </h3>
+    <p contenteditable="true" spellcheck="true">Je suis à l'ecole</p>
+    <p contenteditable="true" spellcheck="false">Je suis à l'ecole</p><br> <hr>
+
+
+    <!-- attribut universel style  -->
+    <h3>attribut universel style </h3>
+    <p style="color: red;">Test attribut style </p><br> <hr>
+
+
+    <!-- attribut universel tabindex  -->
+    <h3>attribut universel tabindex </h3>
+    <!-- 
+        valeur negative -> Il ne p pas capturer le focus
+        valeur 0 -> Il p capturer le focus
+        valeur != 0 -> Il p capturer le focus
+     -->
+     <button tabindex="1">Un bouton - 1</button>
+     <textarea>Saisir un texte</textarea>
+     <button tabindex="0">Un autre bouton - 0</button>
+     <button tabindex="1">Un troisieme bouton - 1</button><br> <hr>
+
+
+    <!-- attribut universel title  -->
+    <h3>attribut universel title </h3>
+    <button title="Ce bouton permet d'ajouter au panier un article.">Add to cart</button><br> <hr>
+
+
+    <!-- attribut universel translate  -->
+    <h3>attribut universel translate </h3>
+
+    <p translate="yes">I'm good at HTML</p> <br><hr>
+
+
+     <!-- Les attributs non universels -->
+     <h1><u>Les attributs non universels</u></h1>
+
+    <!-- attribut non universel accept  -->
+    <h3>attribut non universel accept </h3>
+
+    <!-- Accepter que les fichiers word -->
+    <label for=""> Accepter que les fichiers word</label>
+    <input type="file" accept=".doc, .docx, application/msword"><br>
+
+    <!-- Accepter tous les fichiers audio -->
+    <label for=""> Accepter tous les fichiers audio</label>
+    <input type="file" accept="audio/*"> <br>
+
+    <!-- Accepter tous les fichiers video -->
+    <label for=""> Accepter tous les fichiers video</label>
+    <input type="file" accept="video/*"> <br>
+
+    <!-- Accepter tous les fichiers image -->
+    <label for=""> Accepter tous les fichiers image</label>
+    <input type="file" accept="image/*"> <br>
+
+
+    <!-- Accepter tous les fichiers image et pdf -->
+    <label for=""> Accepter tous les fichiers image et pdf</label>
+    <input type="file" accept="image/*, .pdf/*"> <br>
+ 
+
+    <!-- Accepter tous les fichiers image et pdf -->
+    <label for=""> Accepter que les images .jpeg</label>
+    <input type="file" accept=".png, .jpg, .jpeg"> <br>
+
+    
+    <!-- attribut non universel max, min et step  -->
+    <h3>attribut non universel max, min et step </h3>
+
+    <label for="">Interdit de selectionner une date > 25/06/2024</label>
+    <input type="date" max="2024-06-25" step="1"> <br>
+
+
+    <label for="">Selection des dates avec saut de 3 mois (années max = 2027) </label>
+    <input type="month" max="2027-05" step="3"> <br>
+
+
+    <label for="">Selection des weekend  avec saut de 2 (années max = 2019) </label>
+    <input type="week" max="2019-W23" step="2"> <br>
+
+    <label for="">Selection des weekend  avec saut de 2 (années max = 2019) </label>
+    <input type="time" max="17:00"  step="1"> <br>
+
+    <label for="">Selection des weekend  avec saut de 2 (années max = 2019) </label>
+    <input type="datetime-local" max="2019-12-25T23:23" > <br>
+
+     <label for="">Entrer votre age</label>
+    <input type="number" min="5" max="60"  step="5"> <br>
+    <br><br> <hr>
+
+
+    <!-- Les attributs maxlength / minlength -->
+    <h3>Les attributs maxlength / minlength</h3>
+    <form action="index.php">
+        <input type="password" minlength="2" maxlength="4">
+        <button type="submit"> Envoyer</button>
+    </form><br><br> <hr>
+
+     <!-- Les attributs non universel multiple -->
+     <h3>Les attributs non universel multiple</h3>
+
+     <select multiple name="langage" id="langage">
+        <option>Python</option>
+        <option>Java</option>
+        <option>PHP</option>
+        <option>JavaScript</option>
+     </select>
+</body>
+</html>
